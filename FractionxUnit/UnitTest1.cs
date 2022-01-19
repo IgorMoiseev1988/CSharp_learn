@@ -17,7 +17,7 @@ namespace CSarp_learn.Tests
                 Assert.NotNull(actual);
                 Fraction bad = new Fraction(1, 0);
                 Assert.True(exc);
-            } catch (ArgumentException ex)
+            } catch (ArgumentException)
             {
                 exc = true;
             }
