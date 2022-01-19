@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-namespace Calculator;
+namespace CSharp_learn;
 
 public class Program
 {
@@ -26,7 +26,7 @@ public class Program
             } 
             --counter;
         }
-        throw new IncorrectInputEx("Ебать ты лох, с трех раз не смог нормально дробь ввести, животное!");
+        throw new Exceptions.IncorrectInputEx("Ебать ты лох, с трех раз не смог нормально дробь ввести, животное!");
     }
     static char? GetSign(string? hint = null)
     {
@@ -45,7 +45,7 @@ public class Program
             counter--;
             Console.WriteLine("Ошибка! Поддерживаемые операции: " + string.Join(' ', ValidSigns.ToCharArray()));
         }
-        throw new IncorrectInputEx("Ты че, пёс, знак ввести не можешь? Пошёл нахуй!");
+        throw new Exceptions.IncorrectInputEx("Ты че, пёс, знак ввести не можешь? Пошёл нахуй!");
     }
     static Fraction Calculate(Fraction a, Fraction b, char s) => s switch
     {
@@ -65,7 +65,7 @@ public class Program
             b = GetDrob();
             s = GetSign();
             r = Calculate(a, b, s!.Value);
-        } catch (IncorrectInputEx ex)
+        } catch (Exceptions.IncorrectInputEx ex)
         {
             Console.WriteLine(ex.Message);
             return;
