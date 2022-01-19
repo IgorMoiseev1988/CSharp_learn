@@ -1,9 +1,9 @@
 using Xunit;
 using System;
 using System.Collections.Generic;
+using CSharp_learn;
 
-
-namespace Calculator.Tests
+namespace CSarp_learn.Tests
 {
     public class FractionTest
     {
